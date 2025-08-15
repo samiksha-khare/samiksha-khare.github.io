@@ -12,7 +12,7 @@
 <body>
 
   <!-- Navbar -->
-  <header class="nav">
+  <!-- <header class="nav">
     <div class="wrap nav__inner">
       <a class="brand" href="#top">Samiksha Khare</a>
       <nav class="nav__links">
@@ -21,8 +21,35 @@
         <a class="btn btn--ghost" href="https://youtu.be/zL7VItTKRTo?si=M8_JAvgK5GH06Cxr" target="_blank" rel="noreferrer">In the SCU Spotlight</a>
         <a class="btn btn--ghost" href="Samiksha_Khare_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
       </nav>
+      
     </div>
-  </header>
+  </header> -->
+  <!-- Navigation -->
+   <header class="nav">
+
+    <!-- Navigation -->
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top">Samiksha Khare</a>
+
+    <!-- Hamburger button (mobile only) -->
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      ☰
+    </button>
+
+    <!-- Nav links -->
+    <div class="nav__links" id="navLinks">
+      <a class="btn btn--ghost" href="https://github.com/samiksha-khare" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="btn btn--ghost" href="https://www.linkedin.com/in/samiksha-khare/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="btn btn--ghost" href="https://youtu.be/zL7VItTKRTo?si=M8_JAvgK5GH06Cxr" target="_blank" rel="noreferrer">In the SCU Spotlight</a>
+      <a class="btn btn--ghost" href="Samiksha_Khare_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+    </div>
+  </div>
+</nav>
+
+   </header>
+
+
 
   <!-- Hero -->
   <section class="hero">
@@ -273,9 +300,18 @@ Natural Language Processing, Software Project Management, Dashboards with Tablea
 
   <footer class="footer">
     <div class="wrap footer__inner">
-      <p>© 2025 Samiksha Khare</p>
+      <p>© <span id="year"></span> Samiksha Khare</p>
     </div>
   </footer>
 
 </body>
 </html>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('active');
+  });
+
+ document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>

@@ -128,3 +128,43 @@ a{color:var(--brand)} a:hover{text-decoration:underline}
   margin-top: 8px; /* adjust as needed */
   display: inline-block; /* ensures margin works properly */
 }
+
+
+/* ====== Mobile Nav (hamburger) ====== */
+/* Hide toggle button by default */
+.nav__toggle{
+  display:none;
+  font-size:1.5rem;
+  background:none;
+  border:none;
+  color:var(--text);
+  cursor:pointer;
+  line-height:1;
+  padding:6px 8px;
+  border-radius:8px
+}
+.nav__toggle:focus-visible{outline:2px solid var(--brand)}
+
+/* Mobile styles */
+@media (max-width:768px){
+  .wrap{padding:0 16px}
+  .nav__links{
+    display:none;
+    flex-direction:column;
+    gap:10px;
+    background:var(--panel);
+    padding:12px;
+    position:absolute;
+    top:64px;               /* below nav */
+    right:16px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    min-width: 220px;
+  }
+  .nav__links a{
+    display:block;          /* bigger tap target */
+    padding:8px 10px;
+  }
+  .nav__links.active{display:flex}
+  .nav__toggle{display:block;margin-left:auto}
+}
