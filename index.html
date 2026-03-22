@@ -267,7 +267,7 @@
   <section id="projects" class="section">
     <div class="container">
       <h2 class="section-title">Projects</h2>
-      <p class="section-sub">End-to-end data engineering pipelines, analytics dashboards, and machine learning systems</p>
+      <p class="section-sub">Live web apps, data engineering pipelines, analytics dashboards, and machine learning systems</p>
 
       <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">All</button>
@@ -278,35 +278,48 @@
 
       <div class="projects-grid" id="projects-grid">
 
-        <!-- Blue Economy Dashboard -->
-        <div class="project-card" data-category="data-engineering analytics">
-          <div class="project-header">
-            <div class="project-icon"><i class="fas fa-water"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/samiksha-khare/blue-economy" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-              <a href="https://lookerstudio.google.com/u/0/reporting/dbd416ff-d399-4cd3-a799-2efbecbe655a/page/p_vn4lrgfhrd" target="_blank" title="Live Dashboard"><i class="fas fa-external-link-alt"></i></a>
+        <!-- Game Vault — FEATURED -->
+        <div class="project-card featured" data-category="all">
+          <div class="featured-inner">
+            <div class="featured-left">
+              <div class="featured-badge-row">
+                <div class="featured-badge"><i class="fas fa-star"></i> Featured Project</div>
+                <div class="featured-badge ai-badge"><i class="fas fa-robot"></i> Built with Claude AI</div>
+              </div>
+              <h3 style="font-size:1.3rem;margin-bottom:0.6rem;">Game Vault</h3>
+              <p class="project-desc">
+                A fully deployed <strong>interactive game discovery platform</strong> — browse, search, and explore a curated library of games with rich metadata, genre filters, and a sleek responsive UI. Built end-to-end and live on the web.
+              </p>
+              <div class="project-highlights">
+                <span><i class="fas fa-gamepad"></i> Live — Interactive UI with game browsing &amp; discovery</span>
+              </div>
+            </div>
+            <div class="featured-right">
+              <div class="featured-preview" id="game-preview">
+                <div class="gp-scanlines"></div>
+                <div class="gp-glow"></div>
+                <div class="gp-remote">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="gp-pixels">
+                  <span class="gp-px px1"></span>
+                  <span class="gp-px px2"></span>
+                  <span class="gp-px px3"></span>
+                  <span class="gp-px px4"></span>
+                  <span class="gp-px px5"></span>
+                  <span class="gp-px px6"></span>
+                </div>
+                <div class="gp-bar"><div class="gp-bar-fill"></div></div>
+                <div class="gp-score">SCORE <span class="gp-counter">000000</span></div>
+              </div>
+              <a href="https://game-vault-eight-amber.vercel.app/" target="_blank" class="btn-live">
+                Play Now
+              </a>
             </div>
           </div>
-          <h3>Blue Economy Dashboard</h3>
-          <p class="project-desc">
-            Real-world collaboration with <strong>Google X</strong> analyzing ocean sustainability of Barbados.
-            Built an analytical platform on GCP integrating marine biodiversity, fisheries data (1950–2022),
-            sea surface temperature (satellite), and sargassum trend data. Includes ML forecasting with
-            Prophet. Published to a public Looker Studio dashboard.
-          </p>
-          <div class="project-highlights">
-            <span><i class="fas fa-database"></i> 4 public ocean datasets · FAO, NOAA, Copernicus Marine</span>
-            <span><i class="fas fa-chart-line"></i> Time-series forecasting with Prophet</span>
-          </div>
-          <div class="tag-row">
-            <span class="tag tag-blue">BigQuery</span>
-            <span class="tag tag-blue">Looker Studio</span>
-            <span class="tag tag-blue">GCP</span>
-            <span class="tag tag-blue">Python</span>
-            <span class="tag tag-blue">Prophet</span>
-            <span class="tag tag-blue">Google Colab</span>
-          </div>
         </div>
+
+
 
         <!-- Flight Data Analysis -->
         <div class="project-card" data-category="data-engineering analytics">
@@ -335,6 +348,37 @@
             <span class="tag tag-blue">Tableau</span>
             <span class="tag tag-blue">Amazon S3</span>
             <span class="tag tag-blue">SQL</span>
+          </div>
+        </div>
+
+        <!-- Real-Time Movie Recommendation System -->
+        <div class="project-card" data-category="ml data-engineering">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-film"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/historic-movie-recommendation-system" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.youtube.com/watch?v=3dnpeLyFooQ" target="_blank" title="Demo Video"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <h3>Real-Time Movie Recommendation System</h3>
+          <p class="project-desc">
+            Full-stack web app mapping global historical events to movie recommendations. Uses
+            <strong>TF-IDF &amp; CountVectorizer</strong> for content-based ML recommendations,
+            <strong>Kafka</strong> for real-time streaming, <strong>Airflow</strong> for weekly
+            TMDB data refreshes, <strong>MySQL</strong> for persistence, and a Node.js/EJS UI.
+            Fully containerized with Docker.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-robot"></i> TF-IDF content-based ML · top-5 recommendations</span>
+            <span><i class="fas fa-stream"></i> Kafka streaming · Airflow orchestration</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-purple">scikit-learn</span>
+            <span class="tag tag-purple">Kafka</span>
+            <span class="tag tag-purple">Airflow</span>
+            <span class="tag tag-purple">MySQL</span>
+            <span class="tag tag-purple">Node.js</span>
+            <span class="tag tag-purple">Docker</span>
           </div>
         </div>
 
@@ -394,36 +438,6 @@
           </div>
         </div>
 
-        <!-- Historic Movie Recommendation -->
-        <div class="project-card" data-category="ml data-engineering">
-          <div class="project-header">
-            <div class="project-icon"><i class="fas fa-film"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/samiksha-khare/historic-movie-recommendation-system" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-              <a href="https://www.youtube.com/watch?v=3dnpeLyFooQ" target="_blank" title="Demo Video"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>
-          <h3>Historic Movie Recommendation System</h3>
-          <p class="project-desc">
-            Full-stack web app mapping global historical events to movie recommendations. Uses
-            <strong>TF-IDF &amp; CountVectorizer</strong> for content-based ML recommendations,
-            <strong>Kafka</strong> for real-time streaming, <strong>Airflow</strong> for weekly
-            TMDB data refreshes, <strong>MySQL</strong> for persistence, and a Node.js/EJS UI.
-            Fully containerized with Docker.
-          </p>
-          <div class="project-highlights">
-            <span><i class="fas fa-robot"></i> TF-IDF content-based ML · top-5 recommendations</span>
-            <span><i class="fas fa-stream"></i> Kafka streaming · Airflow orchestration</span>
-          </div>
-          <div class="tag-row">
-            <span class="tag tag-purple">scikit-learn</span>
-            <span class="tag tag-purple">Kafka</span>
-            <span class="tag tag-purple">Airflow</span>
-            <span class="tag tag-purple">MySQL</span>
-            <span class="tag tag-purple">Node.js</span>
-            <span class="tag tag-purple">Docker</span>
-          </div>
-        </div>
 
         <!-- EV NLP Research -->
         <div class="project-card" data-category="ml">
@@ -480,32 +494,6 @@
           </div>
         </div>
 
-        <!-- Movie Recommendation System -->
-        <div class="project-card" data-category="ml">
-          <div class="project-header">
-            <div class="project-icon"><i class="fas fa-clapperboard"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/samiksha-khare/movie-recommendation-system" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <h3>Movie Recommendation System</h3>
-          <p class="project-desc">
-            Content-based recommendation engine on the <strong>TMDB dataset</strong>.
-            Uses NLP techniques and cosine similarity to recommend films based on genres,
-            cast, keywords, and plot descriptions. RESTful APIs manage data with TMDB API integration.
-          </p>
-          <div class="project-highlights">
-            <span><i class="fas fa-database"></i> TMDB dataset · TMDB API</span>
-            <span><i class="fas fa-robot"></i> Cosine similarity · content-based filtering</span>
-          </div>
-          <div class="tag-row">
-            <span class="tag tag-green">Python</span>
-            <span class="tag tag-green">NLP</span>
-            <span class="tag tag-green">Pandas</span>
-            <span class="tag tag-green">scikit-learn</span>
-            <span class="tag tag-green">TMDB API</span>
-          </div>
-        </div>
 
         <!-- Customer Churn Analysis -->
         <div class="project-card" data-category="analytics">
@@ -513,6 +501,7 @@
             <div class="project-icon"><i class="fas fa-chart-pie"></i></div>
             <div class="project-links">
               <a href="https://github.com/samiksha-khare/customer-churn-analysis" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://public.tableau.com/app/profile/samiksha.khare/viz/CustomerChurnDashboard_17460443662510/CustomerOverallAnalyze" target="_blank" title="Live Dashboard"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <h3>Customer Churn Analysis</h3>
@@ -538,6 +527,7 @@
             <div class="project-icon"><i class="fas fa-chart-line"></i></div>
             <div class="project-links">
               <a href="https://github.com/samiksha-khare/sales-insights-tableau" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://public.tableau.com/app/profile/samiksha.khare/viz/sales_dashboard_17483830566180/Dashboard1" target="_blank" title="Live Dashboard"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <h3>Sales Insights Dashboard</h3>
@@ -748,16 +738,16 @@
           </div>
         </div>
 
-        <div class="skill-category skill-category-genai">
+        <div class="skill-category">
           <h3><i class="fas fa-robot"></i> Generative AI</h3>
           <div class="skill-pills">
-            <span class="pill pill-genai">LLMs</span>
-            <span class="pill pill-genai">Prompt Engineering</span>
-            <span class="pill pill-genai">RAG (Retrieval-Augmented Generation)</span>
-            <span class="pill pill-genai">AI Agents</span>
-            <span class="pill pill-genai">Snowflake Cortex AI</span>
-            <span class="pill pill-genai">LLM Pipelines</span>
-            <span class="pill pill-genai">Agentic Workflows</span>
+            <span class="pill">LLMs</span>
+            <span class="pill">Prompt Engineering</span>
+            <span class="pill">RAG (Retrieval-Augmented Generation)</span>
+            <span class="pill">AI Agents</span>
+            <span class="pill">Snowflake Cortex AI</span>
+            <span class="pill">LLM Pipelines</span>
+            <span class="pill">Agentic Workflows</span>
           </div>
         </div>
 
@@ -964,5 +954,21 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Animated score counter for Game Vault preview
+    const counter = document.querySelector('.gp-counter');
+    if (counter) {
+      let score = 0;
+      const target = 148250;
+      const step = Math.ceil(target / 120);
+      const tick = setInterval(() => {
+        score = Math.min(score + step, target);
+        counter.textContent = String(score).padStart(6, '0');
+        if (score >= target) {
+          setTimeout(() => { score = 0; }, 800);
+        }
+      }, 30);
+    }
+  </script>
 </body>
 </html>
