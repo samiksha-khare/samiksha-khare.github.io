@@ -1,323 +1,968 @@
 <!DOCTYPE html>
-<html lang="en" id="top">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Samiksha Khare — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samiksha Khare | Data Analytics & Data Engineering</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <!-- <header class="nav">
-    <div class="wrap nav__inner">
-      <a class="brand" href="#top">Samiksha Khare</a>
-      <nav class="nav__links">
-        <a class="btn btn--ghost" href="https://github.com/samiksha-khare" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn btn--ghost" href="https://www.linkedin.com/in/samiksha-khare/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn btn--ghost" href="https://youtu.be/zL7VItTKRTo?si=M8_JAvgK5GH06Cxr" target="_blank" rel="noreferrer">In the SCU Spotlight</a>
-        <a class="btn btn--ghost" href="Samiksha_Khare_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-      </nav>
-      
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">SK</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header> -->
-  <!-- Navigation -->
-   <header class="nav">
+  </nav>
 
-    <!-- Navigation -->
-<nav class="nav">
-  <div class="wrap nav__inner">
-    <a class="brand" href="#top">Samiksha Khare</a>
-
-    <!-- Hamburger button (mobile only) -->
-    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
-      ☰
-    </button>
-
-    <!-- Nav links -->
-    <div class="nav__links" id="navLinks">
-      <a class="btn btn--ghost" href="https://github.com/samiksha-khare" target="_blank" rel="noreferrer">GitHub</a>
-      <a class="btn btn--ghost" href="https://www.linkedin.com/in/samiksha-khare/" target="_blank" rel="noreferrer">LinkedIn</a>
-      <a class="btn btn--ghost" href="https://youtu.be/zL7VItTKRTo?si=M8_JAvgK5GH06Cxr" target="_blank" rel="noreferrer">In the SCU Spotlight</a>
-      <a class="btn btn--ghost" href="Samiksha_Khare_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <canvas id="particles"></canvas>
     </div>
-  </div>
-</nav>
-
-   </header>
-
-
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="wrap hero__grid">
-
-      <!-- Left: CTAs + About -->
-      <div class="hero__left">
-        <div class="hero__cta">
-          <a class="btn btn--ghost" href="#professional">Experience</a>
-          <a class="btn btn--ghost" href="#projects">Projects</a>
-          <a class="btn btn--ghost" href="#research">Research</a>
-          <a class="btn btn--ghost" href="#skills">Skills</a>
-          <a class="btn btn--ghost" href="#certifications">Certifications</a>
-          <a class="btn btn--ghost" href="#networking">Networking</a>
-          <a class="btn btn--ghost" href="#awards">Awards</a>
-        </div>
-
-        <div class="aboutcard">
-          <h3>About</h3>
-          <p>
-  I’m Samiksha Khare, a Master’s student in Information Systems at Santa Clara University  
-  with over 7 years of professional experience in the software engineering field.  
-</p>
-<p>
-  I specialize in backend development, building ETL data pipelines, working with big data  
-and cloud technologies, designing automation frameworks, and delivering AI/ML-driven,  
-data-driven solutions that solve real-world problems and create measurable business value.  
-
-</p>
-<p>
-  I excel in cross-functional environments, collaborating with global teams  
-  to deliver high-impact projects efficiently and on time.  
-</p>
-          
-        </div>
+    <div class="hero-content">
+      <div class="hero-avatar">
+        <img src="profile.jpg" alt="Samiksha Khare" />
       </div>
-
-      <!-- Right: Photo card -->
-      <aside class="hero__card">
-        <div class="profile"><img src="profile.jpg" alt="Samiksha Khare headshot"></div>
-        <ul class="facts">
-          <li><strong>Location:</strong> Sunnyvale, CA</li>
-          <li><strong>Interests:</strong> SDE · SDET · Data</li>
-        </ul>
-      </aside>
-
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Samiksha Khare</h1>
+      <div class="hero-titles">
+        <span class="typing-text" id="typing"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-desc">
+        MS Information Systems @ Santa Clara University &nbsp;·&nbsp; Sunnyvale, CA<br />
+        7+ years of engineering experience &nbsp;·&nbsp; Dean's List &amp; Merit Scholar
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+<a href="https://github.com/samiksha-khare" target="_blank" class="btn btn-outline">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/samiksha-khare/" target="_blank" class="btn btn-outline">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down"></i>
     </div>
   </section>
 
-  <main class="wrap content">
-
-    <!-- Education -->
-<section id="education" class="section">
-  <h2 class="section__title">Education</h2>
-  <div class="edu__grid">
-    <article class="card edu__item">
-      <div class="edu__header">
-        <h3 class="card__title">Santa Clara University</h3>
-        <span class="edu__date">Expected Dec 2025</span>
-      </div>
-      <p class="meta">M.S. in Information Systems</p>
-      <ul class="list">
-        <li>Research Assistant: Supervised by <a href="https://www.scu.edu/business/isa/faculty/ghiassi/" target="_blank">Prof. Manoochehr Ghiassi</a></li>
-        <li>Graduate Coursework: Object Oriented Programming, Data Analytics - Python, Database Management System, Big Data, BI and Data Warehousing,
-Natural Language Processing, Software Project Management, Dashboards with Tableau, Applied Cloud Computing</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<!-- Projects -->
-    <section id="projects" class="section">
-      <h2 class="section__title">Projects</h2>
-
-      <div class="cards cards--grid">
-        <article class="card">
-          <img src="Screenshot historical.png" alt="Movie Recommendation System Screenshot" class="thumb">
-          <h3 class="card__title">Movie Recommendation System + Historical Milestones</h3>
-          <p class="meta">Python · Kafka · Airflow · MySQL · TMDB API · Machine Learning · Node.js · Express</p>
-          <ul class="list">
-            <li>Full-stack app recommending top-5 movies for historical events using a content-based ML model.</li>
-            <li>Node.js/Express RESTful APIs to manage event data in MySQL, with Kafka streams triggering the ML pipeline on new events.</li>
-            <li>Airflow jobs ingest TMDB data weekly to keep recommendations fresh.</li>
-          </ul>
-          <div class="project-buttons">
-            <a href="https://github.com/samiksha-khare/historic-movie-recommendation-system" target="_blank" rel="noreferrer" class="btn-project">GitHub</a>
-            <a href="https://www.youtube.com/watch?v=3dnpeLyFooQ" target="_blank" rel="noreferrer" class="btn-project">Demo Link</a>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a data-driven technologist with <strong>7+ years of experience in the software industry</strong>
+            and a recent Master's graduate in Information Systems from Santa Clara University. I bring a strong
+            technical foundation and a growing focus on <strong>Data Analytics</strong> and
+            <strong>Data Engineering</strong>, with an interest in building data-focused solutions and
+            delivering meaningful insights.
+          </p>
+          <p>
+            I bring hands-on experience with <strong>Python, SQL, Spark, Kafka, BigQuery, AWS, GCP,
+            Tableau,</strong> and <strong>Looker Studio</strong>, along with project work in <strong>data ETL pipelines</strong>,
+            analytics, dashboards, and machine learning. I enjoy transforming raw data into clear, actionable
+            insights that support smarter business decisions.
+          </p>
+          <p>
+            I'm also excited about the growing impact of <strong>Generative AI</strong> in data workflows,
+            especially in areas like intelligent automation, NLP, and AI-assisted analytics. I'm motivated
+            by roles where I can combine analytical thinking, engineering skills, and curiosity to create
+            real business value.
+          </p>
+          <div class="about-badges">
+            <span class="badge"><i class="fas fa-map-marker-alt"></i> Sunnyvale, CA</span>
+            <span class="badge"><i class="fas fa-briefcase"></i> Open to Work</span>
+            <span class="badge"><i class="fas fa-award"></i> Merit Scholar</span>
           </div>
-        </article>
-
-        <article class="card">
-          <img src="Screenshot flight.png" alt="Flight Data Analysis Screenshot" class="thumb">
-          <h3 class="card__title">Flight Data Analysis</h3>
-          <p class="meta">Databricks · Amazon S3 · PySpark · SparkSQL · BigQuery (Star Schema) · OLAP · Tableau</p>
-          <ul class="list">
-            <li>Processed 19M+ Parquet flight records from S3 in Databricks (PySpark ETL + SparkSQL).</li>
-            <li>Star schema in BigQuery; OLAP queries for delays, taxi times, and cancellations.</li>
-            <li>Interactive Tableau dashboards visualizing routes, seasonality, and KPIs.</li>
-          </ul>
-          <div class="project-buttons">
-            <a href="https://github.com/YourGitHubRepoLink" target="_blank" rel="noreferrer" class="btn-project">GitHub</a>
-            <a href="https://public.tableau.com/app/profile/samiksha.khare/viz/flight-data-visualization/Dashboard2" target="_blank" rel="noreferrer" class="btn-project">Tableau Dashboard</a>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">7+</span>
+            <span class="stat-label">Years of Engineering Experience</span>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Professional -->
-    <section id="professional" class="section">
-      <h2 class="section__title">Professional Experience</h2>
-
-      <article class="card">
-        <h3 class="card__title">Quality Automation Engineer — Dassault Systèmes</h3>
-        <p class="meta">Ranorex · ReadyAPI · TestRail · Task Schedular</p>
-        <ul class="list">
-          <li>Automated ERP application testing using Ranorex and ReadyAPI to expand test coverage and reduce manual efforts.</li>
-          <li>Integrated regression and smoke automation test suites with TestRail for automated reporting.</li>
-          <li>Collaborated in scrum ceremonies with cross-functional teams to ensure product functionality aligns with user requirements.</li>
-
-        </ul>
-      </article>
-
-<article class="card">
-        <h3 class="card__title">Member of Technical Staff — TIBCO Software</h3>
-        <p class="meta">Cypress · RESTful APIs · Jenkins · Docker · AWS · Kubernetes</p>
-        <ul class="list">
-          <li>Developed automation test suites for UI/UX workflows and RESTful APIs using the JavaScript-based Cypress framework for the ModelOps cloud application, achieving 95% coverage of critical business requirements.</li>
-          <li>Configured CI/CD pipelines using Jenkins, GitHub, and Docker to automate functional, smoke, and regression tests, reducing manual testing effort and accelerating release cycles.</li>
-          <li>Conducted installation testing on AWS Elastic Kubernetes Service to deploy ModelOps microservices.</li>
-
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3 class="card__title">Automation Engineer — Cognizant Technology</h3>
-        <p class="meta">Selenium WebDriver · TestNG · SQL · API · Regression · CI/CD</p>
-        <ul class="list">
-          <li>Developed and designed Page Object Model automation framework using Selenium WebDriver with Java, TestNG, and Maven.</li>
-          <li>Performed data verification and validation by executing SQL queries via JDBC to ensure database integrity.</li>
-          <li>Communicated with clients to gather business requirements, develop test strategies, and perform risk-based execution.</li>
-
-        </ul>
-      </article>
-
-      
-    </section>
-
-    <!-- Research -->
-    <section id="research" class="section">
-      <h2 class="section__title">Research Experience</h2>
-      <div class="cards cards--grid">
-        <article class="card">
-          <h3 class="card__title">Research Assistant — Santa Clara University</h3>
-          <p class="meta">Python · Selenium WebDriver · scikit-learn · NLP Feature Engineering</p>
-          <ul class="list">
-            <li>Sentiment driven predictive analytics for electric vehicle market insights.</li>
-            <li>Automated collection of EV market news using Selenium; created a clean labeled corpus for model training.</li>
-            <li>Engineered a 68-feature NLP set and trained an SVM baseline, achieving ~72% accuracy with error analysis.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3 class="card__title">Intern — Google X (Alphabet Inc.) </h3>
-          <p class="meta">GCP · BigQuery · Python · Forecasting · Google Colab · Looker Studio</p>
-          <ul class="list">
-            <li>Built an end-to-end GCP data pipeline; cleaned and joined multi-source ocean datasets in BigQuery.</li>
-            <li>Applied time-series modeling to forecast sea surface temperature trends and seasonality.</li>
-            <a href="https://github.com/samiksha-khare/blue-economy" target="_blank" rel="noreferrer" class="btn-project">GitHub</a>
-            <a href="https://lookerstudio.google.com/u/0/reporting/dbd416ff-d399-4cd3-a799-2efbecbe655a/page/p_vn4lrgfhrd" target="_blank" rel="noreferrer" class="btn-project btn-demo">Published Dashboard</a>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <h2 class="section__title">Skills</h2>
-      <div class="skills">
-        <div class="skill"><h4>Programming Languages</h4><p>Python, Java, JavaScript, NodeJS, HTML/CSS, SQL</p></div>
-        <div class="skill"><h4>Cloud & Big Data</h4><p>AWS, GCP, BigQuery, Apache Spark, Kafka, Airflow, Hadoop, Kubernetes</p></div>
-        <div class="skill"><h4>Tools & Platforms</h4><p>Databricks, Jenkins, Docker, Tableau, Looker Studio, GitHub, Jira, Confluence</p></div>
-        <div class="skill"><h4>Libraries</h4><p>TensorFlow, Scikit-learn, NLTK, Pandas, NumPy, Matplotlib, Seaborn</p></div>
-        <div class="skill"><h4>Methodologies</h4><p>Agile, Scrum, SDLC</p></div>
-        <div class="skill"><h4>QA & Automation</h4><p>Selenium, Ranorex, TestRail, HP ALM, Bugzilla, ReadyAPI, Cypress, TestNG, Jira Xray, REST API testing</p></div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" class="section">
-      <h2 class="section__title">Certifications</h2>
-      <div class="certifications">
-        <div class="certification">
-          <h4><a href="https://www.coursera.org/account/accomplishments/professional-cert/N1UZWDL0U1AY" target="_blank" rel="noreferrer">Google Data Analytics Certification</a></h4>
-          <p>May 2025</p>
-        </div>
-        <div class="certification">
-          <h4><a href="https://www.coursera.org/account/accomplishments/verify/PJOR8447F9MO" target="_blank" rel="noreferrer">Supervised Machine Learning: Regression and
-Classification</a></h4>
-          <p>Aug 2024</p>
-        </div>
-        <div class="certification">
-          <h4><a href="https://www.coursera.org/account/accomplishments/verify/EKZXC5PCLETT" target="_blank" rel="noreferrer">Machine Learning Specialization</a></h4>
-          <p>Sept 2024</p>
-        </div>
-        <div class="certification">
-          <h4><a href="https://www.codecademy.com/profiles/skharescu.edu/certificates/b97fd4d87a816c761a674af1b5391ef1" target="_blank" rel="noreferrer">Python – Codecademy</a></h4>
-          <p>Jan 15, 2024</p>
-        </div>
-        <div class="certification">
-          <h4><a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/Y6SJQLSCXMB41934" target="_blank" rel="noreferrer">AWS Cloud Practitioner</a></h4>
-          <p>June 2023</p>
-        </div>
-        <div class="certification">
-          <h4><a href="ISTQB_Certified_Tester.pdf" target="_blank" rel="noreferrer">ISTQB Certified Tester</a></h4>
-          <p>Dec 2016</p>
-        </div>
-        <div class="certification">
-          <h4><a href="Software_Testing_Certification.pdf" target="_blank" rel="noreferrer">Software Testing Training Certification</a></h4>
-          <p>Oct 2014 – Apr 2015</p>
+          <div class="stat-card">
+            <span class="stat-num">19M+</span>
+            <span class="stat-label">Flight Records Analyzed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">12+</span>
+            <span class="stat-label">Data &amp; ML Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">2×</span>
+            <span class="stat-label">Dean's List Honoree</span>
+          </div>
         </div>
       </div>
-    </section>
-
-        <!-- Networking -->
-<section id="networking" class="section">
-  <h2 class="section__title">Networking & Professional Engagement</h2>
-  <article class="card">
-    <ul class="list">
-      <li>Attended <a href="https://www.linkedin.com/posts/samiksha-khare_databrickssummit2025-dataengineering-ai-activity-7340956747450261505-VN_u?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAxUAycB5Jcsvmns85DCc4gFP1OPFAJLQmY" target="_blank" rel="noreferrer"><strong>AI Summit 2025</strong></a></li>
-      <li>Attended <a href="https://www.linkedin.com/posts/samiksha-khare_snowflakesummit2025-sanfrancisco-snowflakedevday-activity-7337870621730562048-1B1l?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAxUAycB5Jcsvmns85DCc4gFP1OPFAJLQmY" target="_blank" rel="noreferrer"><strong>Snowflake Dev Day 2025</strong></a></strong></li>
-      <li>Attended <a href="https://www.linkedin.com/posts/samiksha-khare_snowflakedevday-ai-innovation-activity-7206037918027583491-qdDi?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAxUAycB5Jcsvmns85DCc4gFP1OPFAJLQmY" target="_blank" rel="noreferrer"><strong>Snowflake Dev Day 2024</strong></a></li>
-      <li>Active member of <strong>SCU AI Collaborate Club</strong></li>
-      <li>Active member of <strong>SCU Women in Tech</strong></li>
-      
-    </ul>
-  </article>
-</section>
-    <!-- Awards & Recognizations -->
-<section id="awards" class="section">
-  <h2 class="section__title">Awards & Recognizations</h2>
-  <article class="card">
-    <ul class="list">
-      <li>Recognized on the <a href="https://www.linkedin.com/posts/samiksha-khare_santaclarauniversity-leaveyschoolofbusiness-activity-7217664032642588673-7rLB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAxUAycB5Jcsvmns85DCc4gFP1OPFAJLQmY" target="_blank" rel="noreferrer"><strong>Dean's List Spring 2024</strong></a> at SCU for outstanding academic achievement.</li>
-      <li>Recognized on the <a href="https://www.linkedin.com/posts/samiksha-khare_santaclarauniversity-leaveyschoolofbusiness-activity-7361966674708779008-JrUe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAxUAycB5Jcsvmns85DCc4gFP1OPFAJLQmY"><strong>Dean's List Spring 2025</strong></a> at SCU for outstanding academic achievement.</li>
-      <li>Awarded Merit Scholarship for the Academic Year by Santa Clara University</li>
-      
-      
-    </ul>
-  </article>
-</section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <p>© <span id="year"></span> Samiksha Khare</p>
     </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+
+        <!-- Dassault -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Quality Automation Engineer Intern</h3>
+                <span class="company">Dassault Systèmes</span>
+              </div>
+              <span class="timeline-date">Summer 2025</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Automated ERP application testing using <strong>Ranorex</strong> and <strong>ReadyAPI</strong>, significantly reducing manual QA effort</li>
+              <li>Integrated regression and smoke test suites with <strong>TestRail</strong> for automated reporting and test traceability</li>
+              <li>Collaborated in Agile/Scrum ceremonies across cross-functional global teams</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Ranorex</span>
+              <span class="tag">ReadyAPI</span>
+              <span class="tag">TestRail</span>
+              <span class="tag">ERP Testing</span>
+              <span class="tag">Agile</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google X -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Software Engineering Intern</h3>
+                <span class="company">Google X (Alphabet Inc.)</span>
+              </div>
+              <span class="timeline-date">2024</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built an end-to-end <strong>GCP data pipeline</strong> ingesting and processing ocean datasets from multiple public sources</li>
+              <li>Applied <strong>time-series modeling</strong> for sea surface temperature forecasting using Prophet</li>
+              <li>Published results to a <strong>Looker Studio dashboard</strong> used by project stakeholders</li>
+              <li>Elevated project deliverable quality, impressing sponsors with data insights and cross-functional collaboration</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag tag-blue">GCP</span>
+              <span class="tag tag-blue">BigQuery</span>
+              <span class="tag tag-blue">Python</span>
+              <span class="tag tag-blue">Google Colab</span>
+              <span class="tag tag-blue">Looker Studio</span>
+              <span class="tag tag-blue">Prophet</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCU Research -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Research Assistant</h3>
+                <span class="company">Santa Clara University — Prof. Manoochehr Ghiassi</span>
+              </div>
+              <span class="timeline-date">2024</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Conducted sentiment-driven predictive analytics research on the <strong>electric vehicle (EV) market</strong></li>
+              <li>Automated EV market news collection using <strong>Selenium</strong>; engineered a 68-feature NLP dataset</li>
+              <li>Trained an SVM baseline model achieving <strong>~72% accuracy</strong> on sentiment classification</li>
+              <li>Contributed to academic research pipeline spanning data collection, feature engineering, and model evaluation</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag tag-purple">NLP</span>
+              <span class="tag tag-purple">scikit-learn</span>
+              <span class="tag tag-purple">SVM</span>
+              <span class="tag tag-purple">Selenium</span>
+              <span class="tag tag-purple">Python</span>
+              <span class="tag tag-purple">Feature Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIBCO -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Member of Technical Staff</h3>
+                <span class="company">TIBCO Software</span>
+              </div>
+              <span class="timeline-date">Prior Experience</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Developed UI/UX and RESTful API automation using <strong>Cypress</strong> (JavaScript), achieving <strong>95% coverage</strong> of critical business requirements for the ModelOps cloud application</li>
+              <li>Configured <strong>CI/CD pipelines</strong> using Jenkins, GitHub, and Docker for fully automated testing workflows</li>
+              <li>Conducted installation and integration testing on <strong>AWS EKS</strong> for microservices deployment</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag tag-orange">Cypress</span>
+              <span class="tag tag-orange">Jenkins</span>
+              <span class="tag tag-orange">Docker</span>
+              <span class="tag tag-orange">AWS EKS</span>
+              <span class="tag tag-orange">CI/CD</span>
+              <span class="tag tag-orange">REST API</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cognizant -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Automation Engineer</h3>
+                <span class="company">Cognizant Technology Solutions</span>
+              </div>
+              <span class="timeline-date">Prior Experience</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Designed a <strong>Page Object Model</strong> framework using Selenium WebDriver, Java, TestNG, and Maven</li>
+              <li>Performed data verification through <strong>SQL queries via JDBC</strong> for backend data integrity testing</li>
+              <li>Gathered client requirements, developed test strategies, and coordinated test execution across releases</li>
+            </ul>
+            <div class="tag-row">
+              <span class="tag">Selenium</span>
+              <span class="tag">Java</span>
+              <span class="tag">TestNG</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Maven</span>
+              <span class="tag">JDBC</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">End-to-end data engineering pipelines, analytics dashboards, and machine learning systems</p>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="data-engineering">Data Engineering</button>
+        <button class="filter-btn" data-filter="analytics">Analytics &amp; BI</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- Blue Economy Dashboard -->
+        <div class="project-card" data-category="data-engineering analytics">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-water"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/blue-economy" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://lookerstudio.google.com/u/0/reporting/dbd416ff-d399-4cd3-a799-2efbecbe655a/page/p_vn4lrgfhrd" target="_blank" title="Live Dashboard"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3>Blue Economy Dashboard</h3>
+          <p class="project-desc">
+            Real-world collaboration with <strong>Google X</strong> analyzing ocean sustainability of Barbados.
+            Built an analytical platform on GCP integrating marine biodiversity, fisheries data (1950–2022),
+            sea surface temperature (satellite), and sargassum trend data. Includes ML forecasting with
+            Prophet. Published to a public Looker Studio dashboard.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-database"></i> 4 public ocean datasets · FAO, NOAA, Copernicus Marine</span>
+            <span><i class="fas fa-chart-line"></i> Time-series forecasting with Prophet</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-blue">BigQuery</span>
+            <span class="tag tag-blue">Looker Studio</span>
+            <span class="tag tag-blue">GCP</span>
+            <span class="tag tag-blue">Python</span>
+            <span class="tag tag-blue">Prophet</span>
+            <span class="tag tag-blue">Google Colab</span>
+          </div>
+        </div>
+
+        <!-- Flight Data Analysis -->
+        <div class="project-card" data-category="data-engineering analytics">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-plane"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/flight-data-analysis-tableau" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://public.tableau.com/app/profile/samiksha.khare/viz/flight-data-visualization/Dashboard2" target="_blank" title="Live Tableau Dashboard"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3>Flight Data Analysis &amp; BI</h3>
+          <p class="project-desc">
+            Processed <strong>19M+ Parquet flight records</strong> from Amazon S3 using PySpark and SparkSQL.
+            Built a <strong>star-schema data warehouse</strong> in BigQuery with OLAP queries and automated
+            incremental ETL updates. Interactive Tableau dashboards visualize routes, seasonality, delays,
+            and KPIs for executive, operational, and marketing reporting.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-database"></i> 19M+ records from Amazon S3</span>
+            <span><i class="fas fa-star"></i> Star schema DWH · OLAP analysis</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-blue">Apache Spark</span>
+            <span class="tag tag-blue">PySpark</span>
+            <span class="tag tag-blue">BigQuery</span>
+            <span class="tag tag-blue">Tableau</span>
+            <span class="tag tag-blue">Amazon S3</span>
+            <span class="tag tag-blue">SQL</span>
+          </div>
+        </div>
+
+        <!-- Crypto Real-Time -->
+        <div class="project-card" data-category="data-engineering">
+          <div class="project-header">
+            <div class="project-icon"><i class="fab fa-bitcoin"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/crypto-real-time-analysis-using-kafka" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Real-Time Crypto Streaming Pipeline</h3>
+          <p class="project-desc">
+            End-to-end real-time streaming pipeline using a <strong>Producer-Consumer architecture</strong>.
+            Fetches live crypto prices from CoinCap API, publishes to <strong>Apache Kafka</strong> topics,
+            persists to <strong>MongoDB</strong>, and visualizes trends in a Streamlit dashboard.
+            Fully containerized with <strong>Docker Compose</strong> for one-command deployment.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-bolt"></i> Real-time streaming · CoinCap API</span>
+            <span><i class="fas fa-cubes"></i> Docker Compose one-command setup</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-orange">Apache Kafka</span>
+            <span class="tag tag-orange">MongoDB</span>
+            <span class="tag tag-orange">Streamlit</span>
+            <span class="tag tag-orange">Docker</span>
+            <span class="tag tag-orange">Python</span>
+          </div>
+        </div>
+
+        <!-- IPL Dataset Analysis -->
+        <div class="project-card" data-category="data-engineering analytics">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-baseball"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/ipl-dataset-analysis" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>IPL Data Pipeline (Spark)</h3>
+          <p class="project-desc">
+            Spark-based data pipeline for analyzing Indian Premier League cricket statistics on
+            <strong>Databricks</strong>. Ingests data from <strong>Amazon S3</strong>, applies Spark
+            transformation logic, executes SQL-based analytics, and generates visualizations from
+            multi-season IPL data.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-fire"></i> Spark ETL on Databricks</span>
+            <span><i class="fas fa-cloud"></i> S3 data lake ingestion</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-red">Apache Spark</span>
+            <span class="tag tag-red">Databricks</span>
+            <span class="tag tag-red">Amazon S3</span>
+            <span class="tag tag-red">SparkSQL</span>
+            <span class="tag tag-red">Python</span>
+          </div>
+        </div>
+
+        <!-- Historic Movie Recommendation -->
+        <div class="project-card" data-category="ml data-engineering">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-film"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/historic-movie-recommendation-system" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.youtube.com/watch?v=3dnpeLyFooQ" target="_blank" title="Demo Video"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <h3>Historic Movie Recommendation System</h3>
+          <p class="project-desc">
+            Full-stack web app mapping global historical events to movie recommendations. Uses
+            <strong>TF-IDF &amp; CountVectorizer</strong> for content-based ML recommendations,
+            <strong>Kafka</strong> for real-time streaming, <strong>Airflow</strong> for weekly
+            TMDB data refreshes, <strong>MySQL</strong> for persistence, and a Node.js/EJS UI.
+            Fully containerized with Docker.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-robot"></i> TF-IDF content-based ML · top-5 recommendations</span>
+            <span><i class="fas fa-stream"></i> Kafka streaming · Airflow orchestration</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-purple">scikit-learn</span>
+            <span class="tag tag-purple">Kafka</span>
+            <span class="tag tag-purple">Airflow</span>
+            <span class="tag tag-purple">MySQL</span>
+            <span class="tag tag-purple">Node.js</span>
+            <span class="tag tag-purple">Docker</span>
+          </div>
+        </div>
+
+        <!-- EV NLP Research -->
+        <div class="project-card" data-category="ml">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-car-battery"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/EV-NLP-Research" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>EV Market Sentiment Analysis (Research)</h3>
+          <p class="project-desc">
+            Academic research project under Prof. Manoochehr Ghiassi at SCU. Automated EV market
+            news collection using Selenium, engineered a <strong>68-feature NLP dataset</strong>,
+            and trained an <strong>SVM model achieving ~72% accuracy</strong> on sentiment
+            classification to predict EV market trends.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-database"></i> 68-feature engineered NLP dataset</span>
+            <span><i class="fas fa-robot"></i> SVM classifier · ~72% accuracy</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-purple">NLP</span>
+            <span class="tag tag-purple">SVM</span>
+            <span class="tag tag-purple">scikit-learn</span>
+            <span class="tag tag-purple">Selenium</span>
+            <span class="tag tag-purple">Python</span>
+            <span class="tag tag-purple">Feature Engineering</span>
+          </div>
+        </div>
+
+        <!-- Neural Network -->
+        <div class="project-card" data-category="ml">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-brain"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/neural-network-for-handwritten-digits-classification" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Neural Network — Digit Classification</h3>
+          <p class="project-desc">
+            Built and trained a neural network to classify handwritten digits on the
+            <strong>MNIST dataset</strong> (70,000 samples). Explored network architecture,
+            activation functions, and hyperparameter tuning to maximize classification accuracy.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-layer-group"></i> MNIST · 70,000 samples</span>
+            <span><i class="fas fa-sliders"></i> Architecture &amp; hyperparameter tuning</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-green">Neural Networks</span>
+            <span class="tag tag-green">Python</span>
+            <span class="tag tag-green">scikit-learn</span>
+            <span class="tag tag-green">NumPy</span>
+          </div>
+        </div>
+
+        <!-- Movie Recommendation System -->
+        <div class="project-card" data-category="ml">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-clapperboard"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/movie-recommendation-system" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Movie Recommendation System</h3>
+          <p class="project-desc">
+            Content-based recommendation engine on the <strong>TMDB dataset</strong>.
+            Uses NLP techniques and cosine similarity to recommend films based on genres,
+            cast, keywords, and plot descriptions. RESTful APIs manage data with TMDB API integration.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-database"></i> TMDB dataset · TMDB API</span>
+            <span><i class="fas fa-robot"></i> Cosine similarity · content-based filtering</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-green">Python</span>
+            <span class="tag tag-green">NLP</span>
+            <span class="tag tag-green">Pandas</span>
+            <span class="tag tag-green">scikit-learn</span>
+            <span class="tag tag-green">TMDB API</span>
+          </div>
+        </div>
+
+        <!-- Customer Churn Analysis -->
+        <div class="project-card" data-category="analytics">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-chart-pie"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/customer-churn-analysis" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Customer Churn Analysis</h3>
+          <p class="project-desc">
+            Interactive Tableau dashboard analyzing customer churn metrics. Identifies
+            high-risk customer segments, key churn drivers, and retention opportunities
+            through visual analytics and data storytelling for business stakeholders.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-chart-bar"></i> Interactive churn dashboard</span>
+            <span><i class="fas fa-users"></i> Segment-level risk analysis</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-teal">Tableau</span>
+            <span class="tag tag-teal">Data Analytics</span>
+            <span class="tag tag-teal">Business Intelligence</span>
+          </div>
+        </div>
+
+        <!-- Sales Insights Tableau -->
+        <div class="project-card" data-category="analytics">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/sales-insights-tableau" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Sales Insights Dashboard</h3>
+          <p class="project-desc">
+            End-to-end sales analytics dashboard in Tableau. Surfaces revenue trends,
+            top-performing products, regional breakdowns, and period-over-period KPIs
+            for executive and business analyst audiences.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-chart-bar"></i> Revenue &amp; KPI trends</span>
+            <span><i class="fas fa-globe"></i> Regional performance breakdown</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-teal">Tableau</span>
+            <span class="tag tag-teal">SQL</span>
+            <span class="tag tag-teal">Data Visualization</span>
+          </div>
+        </div>
+
+        <!-- Sentiment Analysis -->
+        <div class="project-card" data-category="ml analytics">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-comments"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/sentimental-analysis" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Sentiment Analysis — Employee Satisfaction</h3>
+          <p class="project-desc">
+            NLP-powered sentiment analysis on employee feedback to measure satisfaction
+            and identify workplace sentiment patterns. Classifies text into positive,
+            negative, and neutral categories to support data-driven HR decisions.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-robot"></i> NLP text classification</span>
+            <span><i class="fas fa-users"></i> HR analytics use case</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-purple">NLP</span>
+            <span class="tag tag-purple">Python</span>
+            <span class="tag tag-purple">NLTK</span>
+            <span class="tag tag-purple">Pandas</span>
+          </div>
+        </div>
+
+        <!-- Mushroom Classification -->
+        <div class="project-card" data-category="ml">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-seedling"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/mushroom-classification-using-decision-trees" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Mushroom Classification — Decision Trees</h3>
+          <p class="project-desc">
+            Binary classification model using decision trees to distinguish edible from
+            poisonous mushrooms. Explores feature importance, tree depth tuning, and
+            model evaluation for interpretable, explainable ML.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-tree"></i> Decision tree classification</span>
+            <span><i class="fas fa-sliders"></i> Feature importance analysis</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-green">scikit-learn</span>
+            <span class="tag tag-green">Python</span>
+            <span class="tag tag-green">Decision Trees</span>
+            <span class="tag tag-green">Pandas</span>
+          </div>
+        </div>
+
+        <!-- World Billionaires -->
+        <div class="project-card" data-category="analytics">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-globe"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/samiksha-khare/world-billionaires-statistics" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>World Billionaires Statistics</h3>
+          <p class="project-desc">
+            EDA on global billionaire wealth distribution. Analyzes geographic concentration,
+            industry breakdown, net worth trends, and demographic patterns across the world's
+            wealthiest individuals using Python data visualization.
+          </p>
+          <div class="project-highlights">
+            <span><i class="fas fa-map"></i> Global wealth &amp; geographic patterns</span>
+            <span><i class="fas fa-chart-bar"></i> Industry &amp; demographic analysis</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag tag-teal">Python</span>
+            <span class="tag tag-teal">Pandas</span>
+            <span class="tag tag-teal">Matplotlib</span>
+            <span class="tag tag-teal">Seaborn</span>
+            <span class="tag tag-teal">EDA</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-pills">
+            <span class="pill">Python</span>
+            <span class="pill">SQL</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">TypeScript</span>
+            <span class="pill">Java</span>
+            <span class="pill">HTML / CSS</span>
+            <span class="pill">Node.js</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-stream"></i> Data Engineering</h3>
+          <div class="skill-pills">
+            <span class="pill">Apache Spark</span>
+            <span class="pill">Apache Kafka</span>
+            <span class="pill">Apache Airflow</span>
+            <span class="pill">ETL Pipelines</span>
+            <span class="pill">BigQuery</span>
+            <span class="pill">Amazon S3</span>
+            <span class="pill">Databricks</span>
+            <span class="pill">Hadoop</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-brain"></i> ML / AI</h3>
+          <div class="skill-pills">
+            <span class="pill">scikit-learn</span>
+            <span class="pill">TensorFlow</span>
+            <span class="pill">Neural Networks</span>
+            <span class="pill">NLP / TF-IDF</span>
+            <span class="pill">SVM</span>
+            <span class="pill">Prophet</span>
+            <span class="pill">Decision Trees</span>
+            <span class="pill">NLTK</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-chart-bar"></i> Analytics &amp; BI</h3>
+          <div class="skill-pills">
+            <span class="pill">Tableau</span>
+            <span class="pill">Looker Studio</span>
+            <span class="pill">Streamlit</span>
+            <span class="pill">Matplotlib</span>
+            <span class="pill">Seaborn</span>
+            <span class="pill">OLAP / Star Schema</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">NumPy</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-database"></i> Databases</h3>
+          <div class="skill-pills">
+            <span class="pill">MySQL</span>
+            <span class="pill">MongoDB</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">BigQuery</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-cloud"></i> Cloud &amp; DevOps</h3>
+          <div class="skill-pills">
+            <span class="pill">Google Cloud Platform</span>
+            <span class="pill">AWS (S3, EKS)</span>
+            <span class="pill">Snowflake</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Kubernetes</span>
+            <span class="pill">Jenkins</span>
+            <span class="pill">Git / GitHub</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-vial"></i> QA &amp; Automation</h3>
+          <div class="skill-pills">
+            <span class="pill">Selenium</span>
+            <span class="pill">Cypress</span>
+            <span class="pill">Ranorex</span>
+            <span class="pill">TestNG</span>
+            <span class="pill">TestRail</span>
+            <span class="pill">ReadyAPI</span>
+            <span class="pill">HP ALM</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-users-cog"></i> Methodologies</h3>
+          <div class="skill-pills">
+            <span class="pill">Agile / Scrum</span>
+            <span class="pill">SDLC</span>
+            <span class="pill">CI/CD</span>
+            <span class="pill">Data Warehousing</span>
+            <span class="pill">Microservices</span>
+          </div>
+        </div>
+
+        <div class="skill-category skill-category-genai">
+          <h3><i class="fas fa-robot"></i> Generative AI</h3>
+          <div class="skill-pills">
+            <span class="pill pill-genai">LLMs</span>
+            <span class="pill pill-genai">Prompt Engineering</span>
+            <span class="pill pill-genai">RAG (Retrieval-Augmented Generation)</span>
+            <span class="pill pill-genai">AI Agents</span>
+            <span class="pill pill-genai">Snowflake Cortex AI</span>
+            <span class="pill pill-genai">LLM Pipelines</span>
+            <span class="pill pill-genai">Agentic Workflows</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-cards">
+
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fas fa-university"></i></div>
+          <div class="edu-body">
+            <h3>M.S. Information Systems</h3>
+            <span class="edu-school">Santa Clara University — Leavey School of Business</span>
+            <div class="edu-meta">
+              <span><i class="fas fa-calendar"></i> Expected Dec 2025</span>
+              <span><i class="fas fa-award"></i> Dean's List 2024 &amp; 2025</span>
+              <span><i class="fas fa-medal"></i> Merit Scholarship</span>
+            </div>
+            <p class="edu-desc">
+              <strong>Coursework:</strong> Data Analytics - Python · Object-Oriented Programming · Database Management System · Big Data Modeling &amp; Analytics · Business Intelligence &amp; Data Warehouse · Natural Language Processing · Dashboards with Tableau · Applied Cloud Computing
+            </p>
+            <div class="edu-activities">
+              <span class="badge-sm"><i class="fas fa-flask"></i> Research Assistant — Prof. Ghiassi</span>
+              <span class="badge-sm"><i class="fas fa-robot"></i> SCU AI Collaborate Club</span>
+              <span class="badge-sm"><i class="fas fa-venus"></i> SCU Women in Tech</span>
+              <a href="https://youtu.be/zL7VItTKRTo?si=M8_JAvgK5GH06Cxr" target="_blank" class="badge-sm badge-sm-link"><i class="fab fa-youtube"></i> SCU Spotlight Feature</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fas fa-university"></i></div>
+          <div class="edu-body">
+            <h3>Bachelor of Engineering, Electronics &amp; Communication</h3>
+            <span class="edu-school">R.G.P.V University, India</span>
+            <div class="edu-meta">
+              <span><i class="fas fa-calendar"></i> July 2010 – June 2014</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Awards -->
+      <div class="awards-row">
+        <div class="award-card">
+          <i class="fas fa-trophy"></i>
+          <div>
+            <h4>Dean's List</h4>
+            <span>Spring 2024 &amp; Spring 2025</span>
+          </div>
+        </div>
+        <div class="award-card">
+          <i class="fas fa-medal"></i>
+          <div>
+            <h4>Merit Scholarship</h4>
+            <span>Santa Clara University</span>
+          </div>
+        </div>
+        <a class="award-card" href="https://youtu.be/zL7VItTKRTo?si=M8_JAvgK5GH06Cxr" target="_blank">
+          <i class="fab fa-youtube"></i>
+          <div>
+            <h4>SCU Spotlight</h4>
+            <span>Featured in SCU Leavey School YouTube spotlight ↗</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="cert-grid">
+
+        <a class="cert-card" href="https://www.coursera.org/account/accomplishments/professional-cert/N1UZWDL0U1AY" target="_blank">
+          <div class="cert-icon cert-google"><i class="fab fa-google"></i></div>
+          <div>
+            <h4>Google Data Analytics</h4>
+            <span class="cert-issuer">Google · Professional Certificate</span>
+            <span class="cert-date">May 2025 · Verify ↗</span>
+          </div>
+        </a>
+
+        <a class="cert-card" href="https://www.coursera.org/account/accomplishments/verify/EKZXC5PCLETT" target="_blank">
+          <div class="cert-icon cert-coursera"><i class="fas fa-graduation-cap"></i></div>
+          <div>
+            <h4>Machine Learning Specialization</h4>
+            <span class="cert-issuer">Coursera / DeepLearning.AI</span>
+            <span class="cert-date">Sept 2024 · Verify ↗</span>
+          </div>
+        </a>
+
+        <a class="cert-card" href="https://www.coursera.org/account/accomplishments/verify/PJOR8447F9MO" target="_blank">
+          <div class="cert-icon cert-coursera"><i class="fas fa-graduation-cap"></i></div>
+          <div>
+            <h4>Supervised Machine Learning: Regression &amp; Classification</h4>
+            <span class="cert-issuer">Coursera / DeepLearning.AI</span>
+            <span class="cert-date">Aug 2024 · Verify ↗</span>
+          </div>
+        </a>
+
+        <div class="cert-card">
+          <div class="cert-icon cert-snowflake"><i class="fas fa-snowflake"></i></div>
+          <div>
+            <h4>Northstar — From Zero to Agents</h4>
+            <span class="cert-issuer">Snowflake · Cortex AI &amp; AI Agents</span>
+            <span class="cert-date">2025</span>
+          </div>
+        </div>
+
+        <a class="cert-card" href="https://cp.certmetrics.com/amazon/en/public/verify/credential/Y6SJQLSCXMB41934" target="_blank">
+          <div class="cert-icon cert-aws"><i class="fab fa-aws"></i></div>
+          <div>
+            <h4>AWS Cloud Practitioner</h4>
+            <span class="cert-issuer">Amazon Web Services</span>
+            <span class="cert-date">June 2023 · Verify ↗</span>
+          </div>
+        </a>
+
+        <a class="cert-card" href="https://www.codecademy.com/profiles/skharescu.edu/certificates/b97fd4d87a816c761a674af1b5391ef1" target="_blank">
+          <div class="cert-icon cert-python"><i class="fab fa-python"></i></div>
+          <div>
+            <h4>Python</h4>
+            <span class="cert-issuer">Codecademy</span>
+            <span class="cert-date">Jan 2024 · Verify ↗</span>
+          </div>
+        </a>
+
+        <a class="cert-card" href="ISTQB_Certified_Tester.pdf" target="_blank">
+          <div class="cert-icon cert-istqb"><i class="fas fa-check-circle"></i></div>
+          <div>
+            <h4>ISTQB Certified Tester</h4>
+            <span class="cert-issuer">ISTQB — Foundation Level</span>
+            <span class="cert-date">Dec 2016 · View PDF ↗</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Industry Engagement -->
+      <h3 class="activities-title" style="margin-top: 3.5rem;">Industry Engagement</h3>
+      <div class="activity-cards">
+        <div class="activity-card">
+          <i class="fas fa-cube"></i>
+          <span>Databricks AI Summit 2025 — San Francisco</span>
+        </div>
+        <div class="activity-card">
+          <i class="fas fa-snowflake"></i>
+          <span>Snowflake Summit 2025 — San Francisco</span>
+        </div>
+        <div class="activity-card">
+          <i class="fas fa-snowflake"></i>
+          <span>Snowflake Dev Day 2025 &amp; 2024 — San Francisco</span>
+        </div>
+        <div class="activity-card">
+          <i class="fas fa-snowflake"></i>
+          <span>Snowflake Data for Breakfast SF — Cortex AI &amp; AI Agents</span>
+        </div>
+        <div class="activity-card">
+          <i class="fas fa-robot"></i>
+          <span>SCU AI Collaborate Club — Active Member</span>
+        </div>
+        <div class="activity-card">
+          <i class="fas fa-venus"></i>
+          <span>SCU Women in Tech — Active Member</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title" style="display:block; text-align:center;">Get In Touch</h2>
+      <p class="contact-sub">
+        I'm actively seeking entry-level / new-grad roles in <strong>Data Analytics</strong> and
+        <strong>Data Engineering</strong>. If you have an opportunity or just want to connect, I'd love to hear from you!
+      </p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/samiksha-khare/" target="_blank" class="contact-card">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+          <small>linkedin.com/in/samiksha-khare</small>
+        </a>
+        <a href="https://github.com/samiksha-khare" target="_blank" class="contact-card">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+          <small>github.com/samiksha-khare</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed &amp; built by Samiksha Khare · 2026</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
-
-<script>
-  document.getElementById('navToggle').addEventListener('click', function() {
-    document.getElementById('navLinks').classList.toggle('active');
-  });
-
- document.getElementById("year").textContent = new Date().getFullYear();
-
-</script>
