@@ -278,42 +278,48 @@
 
       <div class="projects-grid" id="projects-grid">
 
-        <!-- Game Vault — FEATURED -->
-        <div class="project-card featured" data-category="all">
+        <!-- Snowflake Iceberg — FEATURED -->
+        <div class="project-card featured" data-category="data-engineering">
           <div class="featured-inner">
             <div class="featured-left">
               <div class="featured-badge-row">
                 <div class="featured-badge"><i class="fas fa-star"></i> Featured Project</div>
-                <div class="featured-badge ai-badge"><i class="fas fa-robot"></i> Built with Claude AI</div>
+                <div class="featured-badge snowflake-badge"><i class="fas fa-snowflake"></i> Snowflake + Iceberg</div>
               </div>
-              <h3 style="font-size:1.3rem;margin-bottom:0.6rem;">Game Vault</h3>
+              <h3 style="font-size:1.3rem;margin-bottom:0.6rem;">Snowflake Iceberg Data Pipeline</h3>
               <p class="project-desc">
-                A fully deployed <strong>interactive game discovery platform</strong> — browse, search, and explore a curated library of games with rich metadata, genre filters, and a sleek responsive UI. Built end-to-end and live on the web.
+                Production-grade <strong>Snowflake + Apache Iceberg</strong> data pipeline using medallion architecture on Azure — automating daily ingestion of 10K+ logistics records with dbt-powered transformations, Streamlit dashboards, and Cortex AI analytics.
               </p>
-              <div class="project-highlights">
-                <span><i class="fas fa-gamepad"></i> Live — Interactive UI with game browsing &amp; discovery</span>
+              <ul class="timeline-bullets" style="margin:0.75rem 0 1rem;">
+                <li>Built scalable ingestion from <strong>Azure Blob Storage</strong>, reducing manual data prep by <strong>~60%</strong></li>
+                <li>Implemented <strong>dbt SQL transformations</strong> for customer &amp; shipment data with historical change tracking and reporting auditability</li>
+                <li>Developed <strong>Streamlit dashboards</strong> on Dynamic Tables — logistics KPIs for 10+ stakeholders, <strong>~70% faster</strong> reporting turnaround</li>
+                <li>Configured <strong>RBAC</strong> (3 custom roles), Azure external volume integration, and CI/CD project structure with dbt test automation</li>
+                <li>Applied <strong>Snowflake Cortex AI</strong> for AI-powered querying and faster insight on logistics data</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag tag-blue">Snowflake</span>
+                <span class="tag tag-blue">Apache Iceberg</span>
+                <span class="tag tag-blue">dbt</span>
+                <span class="tag tag-blue">Azure Blob Storage</span>
+                <span class="tag tag-blue">Streamlit</span>
+                <span class="tag tag-blue">Medallion Architecture</span>
+                <span class="tag tag-blue">Cortex AI</span>
+                <span class="tag tag-blue">RBAC</span>
+                <span class="tag tag-blue">CI/CD</span>
               </div>
             </div>
             <div class="featured-right">
-              <div class="featured-preview" id="game-preview">
-                <div class="gp-scanlines"></div>
-                <div class="gp-glow"></div>
-                <div class="gp-remote">
-                  <i class="fas fa-gamepad"></i>
+              <div class="sf-visual">
+                <i class="fas fa-snowflake sf-icon"></i>
+                <div class="sf-stats">
+                  <div class="sf-stat"><span class="sf-num">10K+</span><span class="sf-label">Records / day</span></div>
+                  <div class="sf-stat"><span class="sf-num">~60%</span><span class="sf-label">Less manual prep</span></div>
+                  <div class="sf-stat"><span class="sf-num">~70%</span><span class="sf-label">Faster reporting</span></div>
                 </div>
-                <div class="gp-pixels">
-                  <span class="gp-px px1"></span>
-                  <span class="gp-px px2"></span>
-                  <span class="gp-px px3"></span>
-                  <span class="gp-px px4"></span>
-                  <span class="gp-px px5"></span>
-                  <span class="gp-px px6"></span>
-                </div>
-                <div class="gp-bar"><div class="gp-bar-fill"></div></div>
-                <div class="gp-score">SCORE <span class="gp-counter">000000</span></div>
               </div>
-              <a href="https://game-vault-eight-amber.vercel.app/" target="_blank" class="btn-live">
-                Play Now
+              <a href="https://github.com/samiksha-khare/snowflake-iceberg-project" target="_blank" class="btn-live">
+                <i class="fab fa-github"></i> View on GitHub
               </a>
             </div>
           </div>
@@ -984,21 +990,5 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    // Animated score counter for Game Vault preview
-    const counter = document.querySelector('.gp-counter');
-    if (counter) {
-      let score = 0;
-      const target = 148250;
-      const step = Math.ceil(target / 120);
-      const tick = setInterval(() => {
-        score = Math.min(score + step, target);
-        counter.textContent = String(score).padStart(6, '0');
-        if (score >= target) {
-          setTimeout(() => { score = 0; }, 800);
-        }
-      }, 30);
-    }
-  </script>
 </body>
 </html>
